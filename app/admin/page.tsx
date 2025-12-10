@@ -109,7 +109,7 @@ export default function AdminPage() {
 
       await loadTires()
     } catch (error) {
-      console.error("[v0] Error deleting tire:", error)
+      console.error("Error deleting tire:", error)
       toast({
         title: "Greška",
         description: "Nije moguće obrisati gumu",

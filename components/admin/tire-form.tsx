@@ -1,7 +1,5 @@
 "use client"
-
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -91,11 +89,11 @@ export function TireForm({ tire, onSubmit, onCancel }: TireFormProps) {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="brand">Brend *</Label>
-          <Select value={formData.season} onValueChange={(value) => updateField("brand", value)}>
-            <SelectTrigger id="brand">
+          <Select value={formData.brand} onValueChange={(value) => updateField("brand", value)}>
+            <SelectTrigger id="brand" className="w-full">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="w-full">
               <SelectItem value="Tigar">Tigar</SelectItem>
               <SelectItem value="Sava">Sava</SelectItem>
               <SelectItem value="Nexen">Nexen</SelectItem>
@@ -133,7 +131,7 @@ export function TireForm({ tire, onSubmit, onCancel }: TireFormProps) {
         <div className="space-y-2">
           <Label htmlFor="width">Širina (mm) *</Label>
           <Select value={formData.width} onValueChange={(value) => updateField("width", value)}>
-            <SelectTrigger id="width">
+            <SelectTrigger id="width" className="w-full">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -159,7 +157,7 @@ export function TireForm({ tire, onSubmit, onCancel }: TireFormProps) {
         <div className="space-y-2">
           <Label htmlFor="aspect_ratio">Visina gume *</Label>
           <Select value={formData.aspect_ratio} onValueChange={(value) => updateField("aspect_ratio", value)}>
-            <SelectTrigger id="aspect_ratio">
+            <SelectTrigger id="aspect_ratio" className="w-full">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -181,16 +179,8 @@ export function TireForm({ tire, onSubmit, onCancel }: TireFormProps) {
 
         <div className="space-y-2">
           <Label htmlFor="diameter">Prečnik gume *</Label>
-          {/* <Input
-            id="diameter"
-            type="number"
-            required
-            value={formData.diameter}
-            onChange={(e) => updateField("diameter", e.target.value)}
-            placeholder="15"
-          /> */}
-          <Select value={formData.diameter} onValueChange={(value) => updateField("diametar", value)}>
-            <SelectTrigger id="diameter">
+          <Select value={formData.diameter} onValueChange={(value) => updateField("diameter", value)}>
+            <SelectTrigger id="diameter" className="w-full">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -211,13 +201,13 @@ export function TireForm({ tire, onSubmit, onCancel }: TireFormProps) {
         <div className="space-y-2">
           <Label htmlFor="season">Sezona *</Label>
           <Select value={formData.season} onValueChange={(value) => updateField("season", value)}>
-            <SelectTrigger id="season">
+            <SelectTrigger id="season" className="w-full">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="Letnja">Letnja</SelectItem>
               <SelectItem value="Zimska">Zimska</SelectItem>
-              <SelectItem value="Cjelogodisnja">Allseason</SelectItem>
+              <SelectItem value="Allseason">Allseason</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -225,7 +215,7 @@ export function TireForm({ tire, onSubmit, onCancel }: TireFormProps) {
         <div className="space-y-2">
           <Label htmlFor="condition">Stanje *</Label>
           <Select value={formData.condition} onValueChange={(value) => updateField("condition", value)}>
-            <SelectTrigger id="condition">
+            <SelectTrigger id="condition" className="w-full">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>

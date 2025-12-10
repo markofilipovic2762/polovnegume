@@ -12,15 +12,15 @@ interface TireCardProps {
 
 export function TireCard({ tire }: TireCardProps) {
   const seasonColors = {
-    Letnja: "bg-orange-500/10 text-orange-700 dark:text-orange-400 border-orange-500/20",
-    Zimska: "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/20",
-    Cjelogodisnja: "bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20",
+    Letnja: "bg-orange-500/80 text-orange-100 dark:text-orange-400 border-orange-500/20",
+    Zimska: "bg-blue-500/80 text-blue-100 dark:text-blue-400 border-blue-500/20",
+    Allseason: "bg-green-500/80 text-green-100 dark:text-green-400 border-green-500/20",
   }
 
   const conditionColors = {
-    Odlicno: "bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20",
-    "Vrlo dobro": "bg-yellow-500/10 text-yellow-700 dark:text-yellow-400 border-yellow-500/20",
-    Dobro: "bg-orange-500/10 text-orange-700 dark:text-orange-400 border-orange-500/20",
+    Odlicno: "bg-green-500/80 text-green-100 dark:text-green-400 border-green-500/20",
+    "Vrlo dobro": "bg-yellow-500/80 text-yellow-100 dark:text-yellow-400 border-yellow-500/20",
+    Dobro: "bg-orange-500/80 text-orange-100 dark:text-orange-400 border-orange-500/20",
   }
 
   return (

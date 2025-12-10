@@ -2,13 +2,13 @@ import { pgTable, serial, varchar, integer, numeric, text } from "drizzle-orm/pg
 
 export const tires = pgTable("tires", {
   id: serial("id").primaryKey(),
-  brand: varchar("brand", { length: 100 }),
-  model: varchar("model", { length: 100 }),
+  brand: text("brand"),
+  model: text("model"),
   width: integer("width"),
   aspect_ratio: integer("aspect_ratio"),
   diameter: integer("diameter"),
-  season: varchar("season", { length: 50 }),
-  condition: varchar("condition", { length: 50 }),
+  season: text("season"),
+  condition: text("condition"),
   quantity: integer("quantity"),
   price: numeric("price"),
   description: text("description"),

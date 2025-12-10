@@ -9,8 +9,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 glass">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 animate-slideIn group">
-          <div className="flex h-32 w-32 items-center justify-center transition-transform group-hover:scale-110">
-            {/* <Car className="h-6 w-6 text-primary-foreground" /> */}
+          <div className="flex h-32 w-32 items-center justify-center hover:scale-110 transition-all duration-500">
             <img src={"/logo3.png"} ></img>
           </div>
           {/* <span className="text-xl font-bold"> Denkić</span> */}
